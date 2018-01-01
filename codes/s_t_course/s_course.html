@@ -1,0 +1,107 @@
+{% extends "../pages/s_base.html" %}
+{% block title %} 学生课程表 {% end %}
+
+{% block content %}	
+	<h2>本学期课表</h2>
+	<hr>
+	<div id="table">
+		<table border=1>
+			<thead>
+			<tr>
+				<th style="width:5rem">
+				<th style="width:5rem">星期一
+				<th style="width:5rem">星期二
+				<th style="width:5rem">星期三
+				<th style="width:5rem">星期四
+				<th style="width:5rem">星期五
+				<th style="width:5rem">星期六
+				<th style="width:5rem">星期日
+			</tr>
+			</thead>
+			<tr style="height:5rem">
+				<td>第一节(08:20-10:00)</td>
+				{% for j in ['一', '二', '三', '四', '五', '六', '日'] %}
+					{% for item in items %}
+						{% if item[4] == j and item[5] == '一' %}
+						<td>{{ item[1] }}<br>{{ item[3] }}<br>{{ item[6] }}</td>
+							{% break %}
+						{% elif item == items[-1] %}
+						<td>{{ ' ' }}</td>
+						{% end %}
+					{% end %}
+				{% end %}
+			</tr>
+			<tr style="height:5rem">
+				<td>第二节(10:20-12:00)</td>
+				{% for j in ['一', '二', '三', '四', '五', '六', '日'] %}
+					{% for item in items %}
+						{% if item[4] == j and item[5] == '二' %}
+						<td>{{ item[1] }}<br>{{ item[3] }}<br>{{ item[6] }}</td>
+							{% break %}
+						{% elif item == items[-1] %}
+						<td>{{ ' ' }}</td>
+						{% end %}
+					{% end %}
+				{% end %}
+			</tr>
+			<tr style="height:2rem">
+				<td>午休</td>
+			</tr>
+			</tr>
+			<tr style="height:5rem">
+				<td>第三节(14:00-15:40)</td>
+				{% for j in ['一', '二', '三', '四', '五', '六', '日'] %}
+					{% for item in items %}
+						{% if item[4] == j and item[5] == '三' %}
+						<td>{{ item[1] }}<br>{{ item[3] }}<br>{{ item[6] }}</td>
+							{% break %}
+						{% elif item == items[-1] %}
+						<td>{{ ' ' }}</td>
+						{% end %}
+					{% end %}
+				{% end %}
+			</tr>
+			<tr style="height:5rem">
+				<td>第四节(16:00-17:40)</td>
+				{% for j in ['一', '二', '三', '四', '五', '六', '日'] %}
+					{% for item in items %}
+						{% if item[4] == j and item[5] == '四' %}
+						<td>{{ item[1] }}<br>{{ item[3] }}<br>{{ item[6] }}</td>
+							{% break %}
+						{% elif item == items[-1] %}
+						<td>{{ ' ' }}</td>
+						{% end %}
+					{% end %}
+				{% end %}	
+			</tr>			
+		</table>
+	</div>
+	<hr>
+	<h3>详细课程信息</h3>
+	<div id="list">
+		<table border=1>
+			<thead>
+			<tr>
+				<th style="width:5rem">课程号
+				<th style="width:10rem">课程名
+				<th style="width:5rem">学分
+				<th style="width:5rem">老师
+				<th style="width:5rem">星期
+				<th style="width:5rem">节次
+				<th style="width:5rem">教室
+			</tr>
+			</thead>
+			{% for item in items %}
+			<tr>
+				<td>{{ item[0] }}</td>
+				<td>{{ item[1] }}</td>
+				<td>{{ item[2] }}</td>
+				<td>{{ item[3] }}</td>
+				<td>{{ item[4] }}</td>
+				<td>{{ item[5] }}</td>
+				<td>{{ item[6] }}</td>
+			</tr>
+			{% end %}			
+		</table>
+	</div>	
+{% end %}

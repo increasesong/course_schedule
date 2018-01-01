@@ -1,0 +1,96 @@
+div.container {
+	width: 100%;
+	margin:0px;
+	border:2px solid rgb(81, 130, 187);
+	line-height:150%;
+
+}
+
+div.header {
+	height: 25px;
+	padding:1em;
+	color:white;
+	background-color:rgb(81, 130, 187);
+	clear:left;
+	font: 25px/1 Helvetica, Verdana, sans-serif;
+}
+
+div.footer {
+	height: 20px;
+	padding:0.5em;
+	color:white;
+	background-color:rgb(81, 130, 187);
+	clear:left;
+}
+
+div.left {
+	float:left;
+	width:150px;
+	padding:1em;
+}
+
+div.content {
+	min-height: 80%;
+	margin-left:200px;
+	border-left:2px solid rgb(81, 130, 187);
+	padding:1em;
+}
+
+ul { 
+	overflow: auto; 
+	list-style-type: none;
+	margin-right: 0px; 
+} 
+	   
+li { 
+	height: 25px; 
+	margin-right: 0px; 
+	padding: 6px 10px; 
+} 
+	   
+li a { 
+	font-weight: bold;
+	text-decoration: none; 
+	color: rgb(56, 8, 8); 
+	font: 18px/1 Helvetica, Verdana, sans-serif; 
+	text-transform: uppercase; 
+	-webkit-transition: all 0.5s ease; 
+	-moz-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease; 
+	-ms-transition: all 0.5s ease; 
+	transition: all 0.5s ease; 
+} 	   
+li a:hover { 
+	font-weight: bold;
+	color: #333; 
+} 
+li.active a { 
+	font-weight: bold; 
+	color: #333; 
+}
+
+
+table{	
+	outline:1px solid rgb(81, 130, 187);
+	border-spacing: 1px;
+}
+
+thead th {
+	padding: 7px;
+	background-color: rgb(81, 130, 187);
+	color: #fff;
+	font-weight: bold;
+	font: 18px/1 Helvetica, Verdana, sans-serif; 
+	border-bottom-width: 0;
+}
+
+tr,th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(81, 130, 187);
+}
+
+td,th {
+	padding: 5px ;
+}
+
