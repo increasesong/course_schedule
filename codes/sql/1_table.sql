@@ -45,8 +45,8 @@ ALTER TABLE student ALTER sn
 DROP TABLE IF EXISTS schedule;
 CREATE TABLE IF NOT EXISTS schedule  (
     num         INTEGER,     -- 序号
-    day         char(1),     -- 星期
-    time        char(1),     -- 节次
+    day         CHAR(1),     -- 星期
+    time        CHAR(1),     -- 节次
     classroom   VARCHAR(50), -- 课程教室
     c_cn        INTEGER,     -- 课程序号
     t_tn        INTEGER,     -- 教师序号

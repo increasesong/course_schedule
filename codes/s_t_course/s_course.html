@@ -5,7 +5,7 @@
 	<h2>本学期课表</h2>
 	<hr>
 	<div id="table">
-		<table border=1>
+		<table border=1>	<!--绘制时间表-->
 			<thead>
 			<tr>
 				<th style="width:5rem">
@@ -22,10 +22,10 @@
 				<td>第一节(08:20-10:00)</td>
 				{% for j in ['一', '二', '三', '四', '五', '六', '日'] %}
 					{% for item in items %}
-						{% if item[4] == j and item[5] == '一' %}
+						{% if item[4] == j and item[5] == '一' %}	<!--判断元素是否符合当前格的条件-->
 						<td>{{ item[1] }}<br>{{ item[3] }}<br>{{ item[6] }}</td>
 							{% break %}
-						{% elif item == items[-1] %}
+						{% elif item == items[-1] %}			<!--判断是否执行到itmes最后一个元素-->
 						<td>{{ ' ' }}</td>
 						{% end %}
 					{% end %}
@@ -79,7 +79,7 @@
 	<hr>
 	<h3>详细课程信息</h3>
 	<div id="list">
-		<table border=1>
+		<table border=1>	<!--绘制详细信息列表-->
 			<thead>
 			<tr>
 				<th style="width:5rem">课程号
